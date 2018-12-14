@@ -1,6 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import './about.modules.css'
+import Button from '@material-ui/core/Button'
 
 export const query = graphql`
   query {
@@ -20,6 +20,9 @@ const About = ({ data }) => (
       <div>
         <h1>{data.site.siteMetadata.title}</h1>
         <h3>{data.site.siteMetadata.description}</h3>
+        <Button variant="contained" color="primary">
+          Primary
+        </Button>
       </div>
     )}
   />

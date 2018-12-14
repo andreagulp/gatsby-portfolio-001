@@ -5,6 +5,18 @@ module.exports = {
     author: 'ariccetti',
   },
   plugins: [
+    // {
+    //   resolve: `gatsby-plugin-typography`,
+    //   options: {
+    //     pathToConfigModule: `src/utils/typography.js`,
+    //   },
+    // },
+    {
+      resolve: `@wapps/gatsby-plugin-material-ui`,
+      options: {
+        // Add any options here
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -31,8 +43,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `data`,
+        name: `works`,
         path: `${__dirname}/src/contents/works`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `portfolio`,
+        path: `${__dirname}/src/contents/portfolio`,
       },
     },
     `gatsby-transformer-remark`,
