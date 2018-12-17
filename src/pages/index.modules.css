@@ -17,6 +17,10 @@ h3 {
   text-align: center;
 }
 
+.fp-controlArrow {
+  margin: 0 2em 0 2em;
+}
+
 button {
   padding: 0.93em 1.87em;
   background: #35495e;

@@ -3,6 +3,7 @@ module.exports = {
     title: 'Andrea Riccetti',
     description: 'Business Transformation Consultant',
     author: 'ariccetti',
+    photoUrl: './src/images/gatsby-icon.png',
   },
   plugins: [
     // {

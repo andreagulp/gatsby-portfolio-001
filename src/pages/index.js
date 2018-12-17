@@ -11,23 +11,48 @@ import Portfolio from '../components/portfolio'
 
 const anchors = ['firstPage', 'secondPage', 'thirdPage']
 
+// const Menu = () => {
+//   return (
+//     <div>
+//       <ul id="myMenu">
+//         <li data-menuanchor="firstPage" class="active">
+//           <a href="#firstPage">First section</a>
+//         </li>
+//         <li data-menuanchor="secondPage">
+//           <a href="#secondPage">Second section</a>
+//         </li>
+//         <li data-menuanchor="thirdPage">
+//           <a href="#thirdPage">Third section</a>
+//         </li>
+//         <li data-menuanchor="fourthPage">
+//           <a href="#fourthPage">Fourth section</a>
+//         </li>
+//       </ul>
+//     </div>
+//   )
+// }
+
 const IndexPage = ({ data }) => {
   return (
     <ReactFullpage
       licenseKey="OPEN-SOURCE-GPLV3-LICENSE"
       // anchors={anchors}
-      sectionsColor={['#285c34', '#ff5f45', '#0411ec', '#282c34']}
+      sectionsColor={['#285c34', '#ff5f45', '#277c39', '#282c34']}
       navigation
-      navigationPosition="left"
+      navigationPosition="right"
       slidesNavigation
       navigationTooltips={anchors}
+      // menu={<Menu />}
       render={({ state, fullpageApi }) => {
         return (
           <ReactFullpage.Wrapper>
             <SEO title="Home" keywords={['gatsby', 'application', 'react']} />
             <div className="section">
               <About />
-              <button onClick={() => fullpageApi.moveSectionDown()}>
+              <button
+                style={{ marginTop: '55px' }}
+                onClick={() => fullpageApi.moveSectionDown()}
+              >
                 Check Work Experience
               </button>
             </div>
