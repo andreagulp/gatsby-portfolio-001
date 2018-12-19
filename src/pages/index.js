@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactFullpage from '@fullpage/react-fullpage'
-import { graphql } from 'gatsby'
+// import { graphql } from 'gatsby'
 
 import SEO from '../components/seo'
 import './index.modules.css'
@@ -72,26 +72,26 @@ const IndexPage = ({ data }) => {
   )
 }
 
-export const query = graphql`
-  query {
-    allMarkdownRemark {
-      totalCount
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date
-            sub_title
-          }
-          fields {
-            slug
-          }
-          excerpt
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query {
+//     allMarkdownRemark {
+//       totalCount
+//       edges {
+//         node {
+//           id
+//           frontmatter {
+//             title
+//             date
+//             sub_title
+//           }
+//           fields {
+//             slug
+//           }
+//           excerpt
+//         }
+//       }
+//     }
+//   }
+// `
 
 export default IndexPage

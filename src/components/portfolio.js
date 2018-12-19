@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
 
-export const query = graphql`
+const query = graphql`
   query {
     allFile(filter: { sourceInstanceName: { eq: "portfolio" } }) {
       edges {

@@ -7,7 +7,7 @@ import Avatar from '@material-ui/core/Avatar'
 
 // import MePhoto from './image'
 
-export const query = graphql`
+const query = graphql`
   query {
     site {
       siteMetadata {
