@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
 export default ({ data }) => {
   const post = data.markdownRemark
@@ -7,9 +7,7 @@ export default ({ data }) => {
     <div>
       <h1>{post.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      <Link to="/">
-        <button>Go Back</button>
-      </Link>
+      <button onClick={() => window.history.back()}>Go Back</button>
     </div>
   )
 }

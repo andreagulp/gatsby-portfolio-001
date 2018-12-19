@@ -53,7 +53,6 @@ const About = ({ data, classes }) => {
     <StaticQuery
       query={query}
       render={data => {
-        console.log('data from about', data)
         return (
           <div className={classes.root}>
             <div className={classes.row}>

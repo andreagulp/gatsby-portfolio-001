@@ -28,7 +28,6 @@ const Portfolio = ({ data }) => (
   <StaticQuery
     query={query}
     render={data => {
-      console.log('data Portfolio', data.allFile.edges)
       return (
         <div>
           {data.allFile.edges.map(({ node }) => (

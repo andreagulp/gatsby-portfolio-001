@@ -1,6 +1,8 @@
 import React from 'react'
 import { StaticQuery, graphql, Link } from 'gatsby'
 
+// import './works.modules.css'
+
 const query = graphql`
   query {
     allFile(filter: { sourceInstanceName: { eq: "works" } }) {
@@ -24,12 +26,12 @@ const query = graphql`
   }
 `
 
-const Works = ({ data }) => (
+const Works = ({ data, classes }) => (
   <StaticQuery
     query={query}
     render={data => {
       return (
-        <div id="section-works">
+        <div>
           {data.allFile.edges.map(({ node }) => (
             <div className="slide" key={node.childMarkdownRemark.id}>
               <h3>
