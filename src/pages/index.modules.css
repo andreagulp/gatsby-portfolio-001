@@ -9,17 +9,30 @@ h3 {
   font-weight: 700;
 }
 
+#section1 {
+  background-color: #373a36;
+  color: #d48166;
+}
+#section2 {
+  background-color: #b89f5d;
+  color: #5a7670;
+}
+#section3 {
+  background-color: #3cbcc3;
+  color: #dec79b;
+}
 #section4 {
-  color: #fff;
+  background-color: #18181e;
+  color: #f7f4e9;
 }
 
 .fp-section {
   text-align: center;
 }
 
-.fp-controlArrow {
+/* .fp-controlArrow {
   margin: 0 2em 0 2em;
-}
+} */
 
 button {
   padding: 0.93em 1.87em;
@@ -31,4 +44,49 @@ button {
   margin: 0 auto;
   cursor: pointer;
   font-size: 0.85em;
+}
+
+/* MENU */
+
+#menu li {
+  display: inline-block;
+  margin: 10px;
+  color: #000;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+#menu li.active {
+  background: #666;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+#menu li a {
+  text-decoration: none;
+  color: #000;
+}
+#menu li.active a:hover {
+  color: #000;
+}
+#menu li:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+#menu li a,
+#menu li.active a {
+  padding: 9px 18px;
+  display: block;
+}
+#menu li.active a {
+  color: #fff;
+}
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 40px;
+  z-index: 70;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }

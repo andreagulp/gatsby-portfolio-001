@@ -48,44 +48,48 @@ const styles = {
   },
 }
 
-const About = ({ data, classes }) => (
-  <StaticQuery
-    query={query}
-    render={data => (
-      <div className={classes.root}>
-        <div className={classes.row}>
-          <Avatar
-            alt={data.site.siteMetadata.title}
-            className={classes.bigAvatar}
-            // src={data.site.siteMetadata.photoUrl}
-            // src={<MePhoto />}
-            src="https://todayshomeinc.com/wp-content/uploads/2016/07/DenzelAvatar.jpg"
-          />
-        </div>
-        <Typography
-          className={classes.title}
-          component="h2"
-          variant="h1"
-          gutterBottom
-        >
-          {data.site.siteMetadata.title}
-        </Typography>
-        <Typography
-          className={classes.subTitle}
-          component="h4"
-          variant="h4"
-          gutterBottom
-        >
-          {data.site.siteMetadata.description}
-        </Typography>
+const About = ({ data, classes }) => {
+  return (
+    <StaticQuery
+      query={query}
+      render={data => {
+        console.log('data from about', data)
+        return (
+          <div className={classes.root}>
+            <div className={classes.row}>
+              <Avatar
+                alt={data.site.siteMetadata.title}
+                className={classes.bigAvatar}
+                // src={data.site.siteMetadata.photoUrl}
+                src="https://todayshomeinc.com/wp-content/uploads/2016/07/DenzelAvatar.jpg"
+              />
+            </div>
+            <Typography
+              className={classes.title}
+              component="h2"
+              variant="h1"
+              gutterBottom
+            >
+              {data.site.siteMetadata.title}
+            </Typography>
+            <Typography
+              className={classes.subTitle}
+              component="h4"
+              variant="h4"
+              gutterBottom
+            >
+              {data.site.siteMetadata.description}
+            </Typography>
 
-        {/* <h1>{data.site.siteMetadata.title}</h1>
+            {/* <h1>{data.site.siteMetadata.title}</h1>
         <h3>{data.site.siteMetadata.description}</h3>
         <Button variant="contained" color="primary">
           Primary
         </Button> */}
-      </div>
-    )}
-  />
-)
+          </div>
+        )
+      }}
+    />
+  )
+}
 export default withStyles(styles)(About)
