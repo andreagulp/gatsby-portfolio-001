@@ -8,6 +8,9 @@ import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
 import Button from '@material-ui/core/Button'
 import CardHeader from '@material-ui/core/CardHeader'
+import CardActionArea from '@material-ui/core/CardActionArea'
+
+import MountainImg from '../images/mountains.jpg'
 
 const query = graphql`
   query {
@@ -67,6 +70,9 @@ const styles = theme => ({
   media: {
     height: 140,
   },
+  link: {
+    textDecoration: 'none',
+  },
 })
 
 const Works = ({ data, classes }) => (
@@ -81,15 +87,22 @@ const Works = ({ data, classes }) => (
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.media}
-                    image="http://www.bluthemes.com/assets/img/blog/12/mountains.jpg"
+                    image={MountainImg}
                     title="Contemplative Reptile"
                   />
-                  <CardHeader
-                    title={`${node.childMarkdownRemark.frontmatter.title} @${
-                      node.childMarkdownRemark.frontmatter.company
-                    }`}
-                    subheader={node.childMarkdownRemark.frontmatter.date}
-                  />
+                  <Link
+                    to={node.childMarkdownRemark.fields.slug}
+                    className={classes.link}
+                  >
+                    <CardActionArea>
+                      <CardHeader
+                        title={`${
+                          node.childMarkdownRemark.frontmatter.title
+                        } @${node.childMarkdownRemark.frontmatter.company}`}
+                        subheader={node.childMarkdownRemark.frontmatter.date}
+                      />
+                    </CardActionArea>
+                  </Link>
                   <CardContent>
                     <Typography component="p">
                       {node.childMarkdownRemark.excerpt}
