@@ -89,11 +89,11 @@ const Works = ({ data, classes }) => (
                     }`}
                     subheader={node.childMarkdownRemark.frontmatter.date}
                   />
-                  <CardContent>
+                  {/* <CardContent>
                     <Typography component="p">
                       {node.childMarkdownRemark.excerpt}
                     </Typography>
-                  </CardContent>
+                  </CardContent> */}
                   <CardContent>
                     <Typography component="p">TAGS</Typography>
                   </CardContent>
