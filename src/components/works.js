@@ -37,7 +37,8 @@ const styles = theme => ({
   root: {
     flexGrow: 1,
     textAlign: 'left',
-    margin: 55,
+    marginLeft: 55,
+    marginRight: 55,
     display: 'flex',
     justifyContent: 'center',
   },
@@ -89,11 +90,11 @@ const Works = ({ data, classes }) => (
                     }`}
                     subheader={node.childMarkdownRemark.frontmatter.date}
                   />
-                  {/* <CardContent>
+                  <CardContent>
                     <Typography component="p">
                       {node.childMarkdownRemark.excerpt}
                     </Typography>
-                  </CardContent> */}
+                  </CardContent>
                   <CardContent>
                     <Typography component="p">TAGS</Typography>
                   </CardContent>
