@@ -6,9 +6,10 @@ import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
-import MailIcon from '@material-ui/icons/Mail'
-import PhotoCamera from '@material-ui/icons/PhotoCamera'
-import CardGiftcard from '@material-ui/icons/CardGiftcard'
+import Work from '@material-ui/icons/Work'
+import AccountCircle from '@material-ui/icons/AccountCircle'
+import Class from '@material-ui/icons/Class'
+import Assessment from '@material-ui/icons/Assessment'
 import Menu from '@material-ui/core/Menu'
 import { PORTFOLIO_SECTIONS } from '../utils/portfolio-sections'
 
@@ -30,27 +31,23 @@ const styles = {
 
 const menuConfig = [
   {
-    url: '/',
-    icon: <MailIcon />,
-    text: 'Portfolio',
+    icon: <AccountCircle />,
+    text: 'About Me',
     dataMenuanchor: PORTFOLIO_SECTIONS[0],
   },
   {
-    url: '/login',
-    icon: <PhotoCamera />,
-    text: 'login',
+    icon: <Work />,
+    text: 'My Experience',
     dataMenuanchor: PORTFOLIO_SECTIONS[1],
   },
   {
-    url: '/landing',
-    icon: <CardGiftcard />,
-    text: 'asassa',
+    icon: <Class />,
+    text: 'My Portfolio',
     dataMenuanchor: PORTFOLIO_SECTIONS[2],
   },
   {
-    url: '/landingľ',
-    icon: <CardGiftcard />,
-    text: 'Howwqwqwqqwme',
+    icon: <Assessment />,
+    text: 'My Skills',
     dataMenuanchor: PORTFOLIO_SECTIONS[3],
   },
 ]

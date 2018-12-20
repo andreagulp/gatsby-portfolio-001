@@ -32,7 +32,7 @@ const IndexPage = ({ data }) => {
                 <About />
               </div>
               <div className="section" id="section2">
-                <div className="slide">Very First Slide</div>
+                {/* <div className="slide">Very First Slide</div> */}
                 <Works />
               </div>
               <div className="section" id="section3">
