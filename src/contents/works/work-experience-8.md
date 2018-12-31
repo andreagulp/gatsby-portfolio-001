@@ -1,7 +1,7 @@
 ---
 title: 'Project Manager'
 company: 'Italia Lavoro'
-image: ''
+image: './gatsby-astronaut.png'
 date: 'Apr 2010 – Jan 2013 | 2 yrs 10 mos'
 ---
 

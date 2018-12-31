@@ -1,7 +1,7 @@
 ---
 title: 'Project Manager'
 company: 'Provincia of Cosenza'
-image: ''
+image: './me.jpg'
 date: 'November 2007 - July 2008 | 9 mos'
 ---
 

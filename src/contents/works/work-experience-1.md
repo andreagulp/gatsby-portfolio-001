@@ -2,7 +2,7 @@
 title: 'Strategic Kaizen for IBM Systems'
 sub title: 'Operational Excellence'
 company: 'IBM'
-image: ''
+image: './gatsby-astronaut.png'
 date: 'Aug 2017 – Present'
 ---
 

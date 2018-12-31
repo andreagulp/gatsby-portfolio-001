@@ -10,26 +10,31 @@ import Button from '@material-ui/core/Button'
 import CardHeader from '@material-ui/core/CardHeader'
 import CardActionArea from '@material-ui/core/CardActionArea'
 
-import MountainImg from '../images/mountains.jpg'
-
 const query = graphql`
   query {
-    allFile(filter: { sourceInstanceName: { eq: "works" } }) {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/works/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       edges {
         node {
-          childMarkdownRemark {
-            excerpt
-            id
-            frontmatter {
-              title
-              sub_title
-              date
-              company
-              image
+          id
+          excerpt
+          frontmatter {
+            title
+            company
+            date
+            sub_title
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1050) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
-            fields {
-              slug
-            }
+          }
+          fields {
+            slug
           }
         }
       }
@@ -81,38 +86,34 @@ const Works = ({ data, classes }) => (
     render={data => {
       return (
         <div>
-          {data.allFile.edges.map(({ node }) => (
-            <div className="slide" key={node.childMarkdownRemark.id}>
+          {data.allMarkdownRemark.edges.map(({ node }) => (
+            <div className="slide" key={node.id}>
               <div className={classes.root}>
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.media}
-                    image={MountainImg}
                     title="Contemplative Reptile"
+                    image={node.frontmatter.image.childImageSharp.fluid.src}
                   />
-                  <Link
-                    to={node.childMarkdownRemark.fields.slug}
-                    className={classes.link}
-                  >
+
+                  <Link to={node.fields.slug} className={classes.link}>
                     <CardActionArea>
                       <CardHeader
-                        title={`${
-                          node.childMarkdownRemark.frontmatter.title
-                        } @${node.childMarkdownRemark.frontmatter.company}`}
-                        subheader={node.childMarkdownRemark.frontmatter.date}
+                        title={`${node.frontmatter.title} @${
+                          node.frontmatter.company
+                        }`}
+                        subheader={node.frontmatter.date}
                       />
                     </CardActionArea>
                   </Link>
                   <CardContent>
-                    <Typography component="p">
-                      {node.childMarkdownRemark.excerpt}
-                    </Typography>
+                    <Typography component="p">{node.excerpt}</Typography>
                   </CardContent>
                   <CardContent>
                     <Typography component="p">TAGS</Typography>
                   </CardContent>
                   <CardActions>
-                    <Link to={node.childMarkdownRemark.fields.slug}>
+                    <Link to={node.fields.slug}>
                       <Button size="small" color="primary">
                         Learn More
                       </Button>

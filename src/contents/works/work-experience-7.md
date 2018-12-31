@@ -1,7 +1,7 @@
 ---
 title: 'Bid Specialist'
 company: 'IBM'
-image: ''
+image: './mountains.jpg'
 date: 'Aug 2008 – Jul 2010 | 2 yrs'
 ---
 

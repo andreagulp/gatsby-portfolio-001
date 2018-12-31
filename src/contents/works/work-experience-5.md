@@ -1,7 +1,7 @@
 ---
 title: 'Operation & Transformation Manager'
 company: 'IBM'
-image: ''
+image: './me.jpg'
 date: 'Feb 2013 – Apr 2014 | 1 yr 3 mos'
 ---
 

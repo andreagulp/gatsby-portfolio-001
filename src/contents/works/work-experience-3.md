@@ -1,7 +1,7 @@
 ---
 title: 'EMEA Regional Transformation Leader'
 company: 'IBM'
-image: ''
+image: './icon.png'
 date: 'Nov 2014 – May 2016 | 1 yr 7 mos'
 ---
 

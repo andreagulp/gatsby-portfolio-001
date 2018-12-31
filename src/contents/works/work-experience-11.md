@@ -1,7 +1,7 @@
 ---
 title: 'Project Planner'
 company: 'K Communication'
-image: ''
+image: './icon.png'
 date: 'November 2006 - January 2008 | 1 yrs 7 mos'
 ---
 

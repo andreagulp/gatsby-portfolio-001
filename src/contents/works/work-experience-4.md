@@ -1,7 +1,7 @@
 ---
 title: 'Integration & Transformation Manager'
 company: 'IBM'
-image: ''
+image: './mountains.jpg'
 date: 'May 2014 – Oct 2014 | 6 mos'
 ---
 

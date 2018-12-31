@@ -1,7 +1,7 @@
 ---
 title: 'Marketing and Sales '
 company: 'Dieffe'
-image: ''
+image: './mountains.jpg'
 date: 'Jan 2008 - July 2008  | 7 mos'
 ---
 
